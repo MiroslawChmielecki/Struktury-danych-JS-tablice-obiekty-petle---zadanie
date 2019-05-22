@@ -1,4 +1,4 @@
-let data = [
+const data = [
     {
         id: 'box1',
         title: 'First box',
@@ -32,23 +32,23 @@ let data = [
 ];
 
 //niech zmienna key przybiera wartosc kolejnych elementow z tablicy data
-for (let key in data) {
+for (const key in data) {
     
     
-    let box = document.createElement('div');
+    const box = document.createElement('div');
     //wartosc id atrybutem id boxa
     box.id = data[key].id;  //(box1, box2, box3,...)
     
-    let header = document.createElement('header'); 
+    const header = document.createElement('header'); 
     //wartosc title jest zawartoscia headera
     header.innerHTML = data[key].title; //(first box, second box, third box ..)
 
     //zawartosc boxa
-    let contents = data[key].content;
+    const contents = data[key].content;
     box.innerHTML = contents;  //(Lorem ipsum...)
     
     //wartosc categories dodana jako klasa boxa
-    let classesBox = data[key].categories;
+    const classesBox = data[key].categories;
     box.className = classesBox;   //do boxa dodajemy klasy
     
     //dodaje box do body
